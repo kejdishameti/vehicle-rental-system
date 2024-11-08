@@ -69,6 +69,12 @@ class Program
         Console.WriteLine("Enter license plate: ");
         string? licensePlate = Console.ReadLine();
 
+        if (string.IsNullOrEmpty(model) || string.IsNullOrEmpty(licensePlate))
+        {
+            Console.WriteLine("Model and license plate cannot be null or empty. Please try again.");
+            return;
+        }
+
         if (type == "1")
         {
             Console.WriteLine("Enter number of doors");
@@ -97,8 +103,15 @@ class Program
         {
             Console.Write("Enter Bike Type (Mountain/Road/City): ");
             string? bikeType = Console.ReadLine();
+            if (!string.IsNullOrEmpty(bikeType))
+            {
             rentalService.AddVehicle(new Bike(model, licensePlate, bikeType));
             Console.WriteLine("Bike added successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Bike type cannot be null or empty");
+            }
         }
         else
         {
