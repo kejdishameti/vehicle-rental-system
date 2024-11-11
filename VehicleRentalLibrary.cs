@@ -47,7 +47,7 @@ namespace VehicleRentalLibrary
                 return false;
             }
             IsRented = false;
-            Console.WriteLine("$Vehicle {Model} has been returned successfully.");
+            Console.WriteLine($"Vehicle {Model} has been returned successfully.");
             return true;
         }
     }
