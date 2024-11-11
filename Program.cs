@@ -89,9 +89,6 @@ class Program
                 {
                     Console.WriteLine("Model and license plate cannot be null. Please try again.");
                 }
-
-                rentalService.AddVehicle(new Car(model, licensePlate, doors));
-                Console.WriteLine("Car added successfully!");
             }
             else
             {
@@ -149,7 +146,6 @@ class Program
         {
             Console.WriteLine("Invalid license plate. Please try again");
         }
-        rentalService.ReturnVehicle(licensePlate);
     }
 }
 
